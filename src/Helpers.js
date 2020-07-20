@@ -126,3 +126,29 @@ export const voteProjectsRequest = (token, type, id) => {
         })
     }).then(resp => resp)
 };
+
+export const updateUserRequest = (token, info) => {
+    return fetch('https://picsart-bootcamp-2020-api.herokuapp.com/api/v1/users/update', {
+        method: 'PUT',
+        headers: {
+            token,
+            // 'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(info)
+    }).then(resp => resp)
+}
+
+export const compareObjects = (obj1, obj2) => {
+    let difference = {};
+
+    for (let key in obj1) {
+        if (obj1[key] !== obj2[key]) {
+            difference[key] = obj2[key];
+        }
+    };
+
+    return {
+        isEqual: Object.keys(difference).length === 0,
+        difference
+    };
+};

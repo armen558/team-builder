@@ -3,7 +3,8 @@ export {
     fetchCompaniesList,
     register,
     logout,
-    fetchUser
+    fetchUser,
+    updateUser
 } from './authActions';
 
 export {

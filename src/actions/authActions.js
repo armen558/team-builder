@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import { fetchCompanies, loginRequest, registerRequest, logoutRequest, getUser } from '../Helpers';
+import { fetchCompanies, loginRequest, registerRequest, logoutRequest, getUser, updateUserRequest } from '../Helpers';
 
 const fetchCompaniesSuccess = (data) => {
     return {
@@ -148,6 +148,40 @@ export const fetchUser = (token) => {
             })
             .then(data => dispatch(fetchUserSuccess(data)))
             .catch(err => dispatch(fetchUserFail(err)))
+
+    };
+};
+
+const updateUserStart = () => {
+    return {
+        type: actionTypes.UPDATE_USER_START
+    };
+};
+const updateUserSuccess = () => {
+    return {
+        type: actionTypes.UPDATE_USER_SUCCESS,
+    };
+};
+const updateUserFail = (err) => {
+    return {
+        type: actionTypes.UPDATE_USER_FAIL,
+        payload: err
+    };
+};
+
+export const updateUser = (token, info) => {
+    return dispatch => {
+        dispatch(updateUserStart());
+        updateUserRequest(token, info)
+            .then(resp => {
+                if (resp.status === 200) {
+                    dispatch(updateUserSuccess());
+                    // dispatch(fetchUser(token))
+                } else {
+                    throw new Error('User data update failed')
+                }
+            })
+            .catch(err => dispatch(updateUserFail(err)))
 
     };
 };

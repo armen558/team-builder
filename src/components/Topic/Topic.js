@@ -13,7 +13,7 @@ const Topic = props => {
         <div className="topic">
             <h4>{props.title}</h4>
             <div className="btnsWrap">
-                {props.votingsCount ? <div className="votes">Votes: {props.votingsCount}</div> : null}
+                <div className="votes">Votes: {props.votingsCount}</div>
                 <button
                     className={`likeBtn ${props.votedByMe ? 'liked' : ''}`}
                     onClick={() => props.voting(voteType, props.id)}

@@ -69,6 +69,23 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 userInfo: action.payload
             }
+        case actionTypes.UPDATE_USER_START:
+            return {
+                ...state,
+                isLoading: true
+            }
+        case actionTypes.UPDATE_USER_SUCCESS:
+        console.log(action)    
+        return {
+                ...state,
+                isLoading: false,
+            }
+        case actionTypes.UPDATE_USER_FAIL:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload.message
+            }
         default:
             return state;
     }
