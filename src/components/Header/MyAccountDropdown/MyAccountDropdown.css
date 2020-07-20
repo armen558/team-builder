@@ -1,0 +1,47 @@
+.accDropdownWrap {
+    padding: 0 15px;
+    position: relative;
+}
+.myAccBtn, .logoutBtn {
+    cursor: pointer;
+}
+.myAccBtn {
+    font-weight: 600;
+    color: #333333;
+}
+.myAccBtn:hover {
+    color: rgb(48, 143, 72);
+}
+.dropdown {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: absolute;
+    top: 34px;
+    width: 200px;
+    background-color: #FFFFFF;
+    right: -20px;
+    box-shadow: 0 0 15px -5px rgba(0,0,0,0.3);
+}
+.dropdown.open {
+    height: auto;
+    padding: 15px;
+}
+.dropdown a, .dropdown span {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+}
+.dropdown a:hover, .dropdown span:hover {
+    color: rgb(48, 143, 72);
+}
+
+.avatar {
+    display: block;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 auto 30px auto;
+
+}

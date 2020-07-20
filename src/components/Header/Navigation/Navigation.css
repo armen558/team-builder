@@ -1,0 +1,26 @@
+.navigation {
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mainMenu {
+    list-style: none;
+    padding: 0;
+}
+
+.mainMenu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.mainMenu li a {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    font-weight: 600;
+}
+.mainMenu li a:hover,
+.mainMenu li a:active,
+.mainMenu li a.active {
+    color: rgb(48, 143, 72);
+}

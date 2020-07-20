@@ -1,0 +1,42 @@
+.topic {
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.topic h4 {
+    margin: 0;
+    width: 60%;
+}
+.topic .btnsWrap {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+
+.topic .likeBtn, .topic .deletBtn {
+    padding: 5px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #aaaaaa;
+    font-size: 14px;
+    outline: none;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+.topic .likeBtn.liked {
+    background-color: rgb(48, 143, 72);
+    color: #FFFFFF;
+    border-color: rgb(48, 143, 72);
+}
+.topic .deletBtn {
+    font-size: 36px;
+    line-height: 20px;
+    padding: 5px;
+}
+.topic .deletBtn:disabled {
+    color: #dddddd;
+    border-color: #dddddd;
+}

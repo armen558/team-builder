@@ -1,0 +1,28 @@
+.project {
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.project h4 {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+}
+.poject p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.project .likeBtn {
+    border: 1px solid #DDDDDD;
+    padding: 8px 15px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    outline: none;
+}
+.project .likeBtn.liked {
+    border-color: rgb(48, 143, 72);
+    background-color: rgb(48, 143, 72);
+    color: #FFFFFF
+}

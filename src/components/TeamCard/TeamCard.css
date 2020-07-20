@@ -1,0 +1,11 @@
+.teamCard {
+    width: 300px;
+    max-width: 33%;
+    margin: auto;
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+}
+
+.teamCard h5 {
+    text-align: center;
+}

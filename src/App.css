@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:not([type="radio"]), select {
+    width: 350px;
+    height: 45px;
+    max-width: 100%;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #dddddd;
+    padding: 8px 15px;
+    outline: none !important;
+    transition: all 0.3s;
+    font-size: 14px;
+    line-height: 14px;
+}
+input:not([type="radio"]):focus, select:focus {
+    box-shadow: 0 0 7px -3px rgba(0,0,0,0.5);
+}
+.radioInputs {
+    text-align: center;
+    margin: 20px 0;
+}
+.radioInputs label {
+    margin-right: 20px;
+}
+input[type="submit"] {
+    background-color: rgb(48, 143, 72);
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid rgb(48, 143, 72);
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    color: rgb(48, 143, 72);
+    background-color: #FFFFFF;
+}
+input[type="submit"]:disabled {
+    background-color: rgb(207, 207, 207);
+    cursor: not-allowed;
+    color: #FFFFFF;
+    border-color: rgb(207, 207, 207);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.error {
+    font-size: 12px;
+    margin: 20px 0;
+    text-align: center;
+    color: red;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.note {
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+    margin: 20px 0;
 }
-
-.App-link {
-  color: #61dafb;
+.note a {
+    color: rgb(48, 143, 72);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note a:hover {
+    color: rgb(31, 94, 47);
 }

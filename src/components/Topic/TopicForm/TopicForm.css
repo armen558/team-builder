@@ -1,0 +1,12 @@
+.topicForm form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.topicForm form input {
+    margin: 0;
+}
+.topicForm form input[type="submit"] {
+    width: auto;
+    padding: 0 30px
+}
